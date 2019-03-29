@@ -55,9 +55,23 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'zone.js/dist/zone';  // Included with Angular CLI.
+//if (global === undefined) { var global = window; }
+//import './app/global-shim';
+(window as any).global = window;
+(window as any).__Zone_enable_cross_context_check = true;
+//import 'classlist.js';
+
+ //import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+import './cores-js';
+import '@webcomponents/custom-elements/src/native-shim';
+import '@webcomponents/custom-elements/custom-elements.min';
+//import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js'; 
+//import 'element-remove';
+import 'array.from';
+
+//import 'intl/dist/Intl';
