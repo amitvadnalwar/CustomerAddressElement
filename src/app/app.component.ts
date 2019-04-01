@@ -1,6 +1,6 @@
 import { Component, OnInit, Input , EventEmitter, Output } from '@angular/core';
 import { Address } from './Models/Address';     // used to set control data with model data
-import { viewModel } from './Models/ViewModel'; // used for setting control properties based on country
+import { ViewModel } from './Models/ViewModel'; // used for setting control properties based on country
 
 
 @Component({
@@ -14,8 +14,7 @@ export class AppComponent implements OnInit {
   public State:String;
   public Country:String;
   public errMsg:String;
-  
-  public ViewModel:viewModel=<viewModel>{};
+  public ViewModel: ViewModel = {} as ViewModel;
 
 
   @Input() params: string;
@@ -36,9 +35,15 @@ export class AppComponent implements OnInit {
          ];
        
         //set values of view model based on api call
-        this.ViewModel.FirstName= { visible:true,disabled:true,required:true};
-     
-        this.ViewModel.LastName={ visible:true,disabled:false,required:true};
+        this.ViewModel.Title= { visible:true,disabled:true,required:true};
+        this.ViewModel.FirstName= { visible:true,disabled:false,required:true};
+        this.ViewModel.LastName={ visible:true,disabled:true,required:true};
+        this.ViewModel.MiddleInitial={ visible:true,disabled:false,required:true};
+        this.ViewModel.Department={ visible:true,disabled:false,required:true};
+        this.ViewModel.InvoicingEmail={ visible:true,disabled:false,required:true};
+        this.ViewModel.MobilePhone={ visible:true,disabled:true,required:true};
+        this.ViewModel.WorkPhone={ visible:true,disabled:false,required:true};
+        this.ViewModel.Fax={ visible:true,disabled:false,required:true};
               
   }
   
@@ -50,15 +55,6 @@ export class AppComponent implements OnInit {
          
     
   }
- // ngAfterContentChecked() {
-  //  console.log("ngAfterContentChecked :" + this.params);
-  //}
-
-  
- // ngAfterViewChecked() {
-  //  console.log("ngAfterViewChecked:" +this.params);
-  //}
-
 
   // create address based on input data
   onSubmit() {

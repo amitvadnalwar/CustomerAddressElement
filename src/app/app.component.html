@@ -1,167 +1,40 @@
-
- <div>
-  <div class="jumbotron vertical-center">
-      <div class="container">
+<div class="dds__container-fluid"> 
+        <div class="dds__col-sm-12 dds__col-md-12 dds__col-xl-12 dds__py-5">
               <div class="text-center">
                       <h2>Create Address</h2>
                       <h4>Add Location - TEST UC- UNALLOCATED CHANNEL</h4>
                       <hr>
               </div>
-      <div class="row">
-          <!-- first main column  Address-->
-
-      <div class="col-md-6">
-       <div class="row-md-1"></div>
-
-       <div class="col-md-2">
-       <label>Types</label>
-       </div>
-       
-        <div class="form-check col-md-3">
-              <input class="form-check-input" type="checkbox" >
-              <label class="form-check-label">
-                  Billing
-                </label>
-         
-       </div>
-       
-        <div class="form-check col-md-3">
-                  <input class="form-check-input" type="checkbox" >
-                  <label class="form-check-label">
-                      Shipping
-                    </label>
-        </div>
-
-        <div class="form-check col-md-4">
-                  <input class="form-check-input" type="checkbox" >
-                  <label class="form-check-label">
-                      As Primary
-                    </label>
-              
-        </div>
-
-              <br>
-              <div class="row-md-1">
-                              <div class="col-md-12 text-left">
-                      <h4><label>Address</label></h4>  
-                              </div>
-              </div> 
-              <div class="row-md-1">
-                      
-                      <div class="col-md-3  text-left">
-                              <label>Country</label>  
-                       </div>
-                       <div class="col-md-9">                 
-                            <select [(ngModel)]="Country" id="Country"  class="form-control">
-                              <option value="" disabled selected>select an option</option>
-                              <option value="In">India</option>
-                              <option value="Us">United States</option>
-                              <option value="Fr">France</option>
-                              <option value="Ch">China</option>
-                            </select>
-                       </div>
-              </div>
-
-              <div class="row-md-1"> 
-          
-                      <div class="col-md-3  text-left">
-                              <label>Addressline1</label>  
-                       </div>
-                       <div class="col-md-9">
-                                  <input type="text" class="form-control" required>
-                       </div>
-              </div>
-
-
-              <div class="row-md-1"> 
-          
-                      <div class="col-md-3  text-left">
-                              <label>Addressline2</label>  
-                       </div>
-                       <div class="col-md-9">
-                                  <input type="text" class="form-control" required>
-                       </div>
-              </div>
-
-              <div class="row-md-1"> 
-          
-                      <div class="col-md-3  text-left">
-                              <label>ZipCode</label>  
-                       </div>
-                       <div class="col-md-9">
-                                  <input type="text" class="form-control" required>
-                       </div>
-              </div>
-              <div class="row-md-1"> 
-          
-                      <div class="col-md-3  text-left">
-                              <label>City</label>  
-                       </div>
-                       <div class="col-md-9">
-                                  <input type="text" class="form-control" required>
-                       </div>
-              </div>
-
-              <div class="row-md-1"> 
-          
-                      <div class="col-md-3  text-left">
-                              <label>State</label>  
-                       </div>
-                       <div class="col-md-9">
-                              <select [(ngModel)]="State" id="State"  class="form-control">
-                                      <option value="" disabled selected>select an option</option>
-                                      <option>Karnataka</option>
-                                      <option>TamilNadu</option>
-                                      <option>Delhi</option>
-                                      <option>Maharashtra</option>
-                                    </select>          
-                       </div>
-              </div>
-      </div>
-     
-
-    <!-- second  Main  column   Contact -->
-
-      <div class="col-md-6">
-                      <div class="row-md-1"><h5><label></label></h5>
-                      </div>      
-          <div class="row-md-1">
-                  
-                      <div class="col-md-12 text-left">
-                                      <h4><label>Contact</label></h4>  
-                       </div>
-          </div>
-         <dropdown-box label="Title" type="dropdown"  id="Title"  [dropdownInput]="titledata" [visible]=true (InputValueChange)=setModelValue($event)></dropdown-box>
-         <input-box  label="FirstName" type="text"  id="FirstName"  [disable]="ViewModel.FirstName.disabled" [visible]="ViewModel.FirstName.visible" (InputValueChange)=setModelValue($event)></input-box>
-         <input-box  label="LastName" type="text"  id="LastName"  [disable]="ViewModel.FirstName.disabled" [visible]="ViewModel.LastName.visible" (InputValueChange)=setModelValue($event)></input-box>
-         <input-box  label="Middle Initial" type="text"  id="MiddleInitial"  [visible]=true (InputValueChange)=setModelValue($event)></input-box>
-         <input-box  label="Department" type="text"  id="Department"  [visible]=true (InputValueChange)=setModelValue($event)></input-box>
-         <input-box  label="InvoicingEmail" type="text"  id="InvoicingEmail"   [visible]=true (InputValueChange)=setModelValue($event)></input-box>
-         <input-box  label="MobilePhone" type="text"  id="MobilePhone"  [visible]=true (InputValueChange)=setModelValue($event)></input-box>
-         <input-box  label="WorkPhone" type="text"  id="WorkPhone"  [visible]=true (InputValueChange)=setModelValue($event)></input-box>
-         <input-box  label="Fax" type="text"  id="Fax"  [visible]=true (InputValueChange)=setModelValue($event)></input-box>
-         <dropdown-box  label="InvoiceDelivery" type="dropdown"  id="InvoiceDelivery"  [dropdownInput]="invoicedeliverydata" [visible]=true (InputValueChange)=setModelValue($event)></dropdown-box>
-         
-         <div class="row-md-1"> 
-                  <div class="row form-group col-md-6 pull-right">
-                          <br>
-                                  <button type="button" class="btn btn-primary btn-md" 
-                                   placeholder="Submit button." (click)="onSubmit()">
-                                   Submit 
-                                   </button>&nbsp;
-                                   <button type="button" class="btn btn-primary btn-md " 
-                                   placeholder="cancel button." (click)="onCancel()">
-                                   Cancel
-                                  </button>
-                               
-                   <div>
-        </div> 
-          <!-- end of second main column  -->
-      </div>
-      
-      </div>
-      </div>
-      </div>
+              <div class="dds__form-row">
+                <div class="dds__col-md-4 dds__mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="dds__form-control" id="validationCustom01" required="" aria-invalid="false">
+                    <div class="dds__invalid-feedback">
+                        Please enter your first name.
+                    </div>
+                </div>
+                <div class="dds__col-md-4 dds__mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="dds__form-control" id="validationCustom02" required="">
+                    <div class="dds__invalid-feedback">
+                        Please enter your last name.
+                    </div>
+                </div>
+                <div class="dds__col-md-4 dds__mb-3">
+                    <label for="validationCustomUsername">Username</label>
+                    <div class="dds__input-group">
+                        <!-- <div class="dds__input-group-prepend">
+                            <span class="dds__input-group-text" id="inputGroupPrepend">@</span>
+                        </div> -->
+                        <input type="text" class="dds__form-control" id="validationCustomUsername" required="">
+                        <div class="dds__invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+ </div>
   
   
    

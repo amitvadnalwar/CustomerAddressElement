@@ -1,14 +1,12 @@
 export interface Address {
-    Title:String;
-    FirstName : String;
-    LastName:String;
-    MiddleInitial:String;
-    Department:String;
-    InvoicingEmail:String;
-    MobilePhone:number;
-    WorkPhone:number;
-    Fax:number;
-    InvoiceDelivery:String;
+    Title: string;
+    FirstName: string;
+    LastName: string;
+    MiddleInitial: string;
+    Department: string;
+    InvoicingEmail: string;
+    MobilePhone: number;
+    WorkPhone: number;
+    Fax: number;
+    InvoiceDelivery: string;
   }
-
-  

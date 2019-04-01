@@ -20,8 +20,6 @@ export class InputComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
-    
   }
 
    // used to bind model with selected data which will be passed to parent component

@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule ,Injector } from '@angular/core';
-
-//import { AppRoutingModule } from './app-routing.module';
+import { NgModule, Injector } from '@angular/core';
 import { AppComponent } from './app.component';
-import { createCustomElement } from "@angular/elements";
+import { createCustomElement } from '@angular/elements';
 
 // form modules
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,11 +14,10 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     AppComponent,
     InputComponent,
     DropdownComponent,
-    
   ],
   imports: [
     BrowserModule,
-    //AppRoutingModule,
+    // AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
@@ -31,19 +28,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 export class AppModule {
 
   constructor(private injectr: Injector) {}
-   
- // constructor(private injector: Injector) {    
-    //The customElements is used for defining a custom element globaly.
-  //  const customElement = createCustomElement(AppComponent, { injector });
-    //Defining a new element
-  // customElements.define('address-comp', customElement);
-  //}
-  
- //ngDoBootstrap() {
- // }
-
   ngDoBootstrap() {
    const adrel = createCustomElement(AppComponent, { injector: this.injectr });
-    customElements.define('address-comp', adrel);
+   customElements.define('address-comp', adrel);
    }
  }
