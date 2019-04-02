@@ -1,6 +1,7 @@
 {
-  "name": "angular-component",
+  "name": "customer-address-component",
   "version": "0.0.0",
+  "main": "elements/address-element.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

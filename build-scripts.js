@@ -13,7 +13,6 @@ const concat = require('concat');
     await fs.ensureDir('elements')
     
     await concat(files, 'elements/address-element.js');
-    //await fs.copyFile('./dist/AngularComponent/styles.css', 'elements/styles.css')
     console.info('Angular Elements created successfully!')
 
 })()

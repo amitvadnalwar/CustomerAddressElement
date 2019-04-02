@@ -17,12 +17,11 @@ import { DropdownComponent } from './dropdown/dropdown.component';
   ],
   imports: [
     BrowserModule,
-    // AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
- // bootstrap: [],
+  bootstrap: [],
   entryComponents: [AppComponent]
 })
 export class AppModule {
@@ -30,6 +29,6 @@ export class AppModule {
   constructor(private injectr: Injector) {}
   ngDoBootstrap() {
    const adrel = createCustomElement(AppComponent, { injector: this.injectr });
-   customElements.define('address-comp', adrel);
+   customElements.define('app-address', adrel);
    }
  }
